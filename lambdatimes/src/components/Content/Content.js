@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
 import Tabs from './Tabs';
 import Cards from './Cards';
-
 import uuid from 'uuid';
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+import pt from 'prop-types';
 
 export default class Content extends Component {
 	constructor(props) {
@@ -75,3 +74,13 @@ export default class Content extends Component {
 		);
 	}
 }
+
+Content.propTypes = {
+	cards: pt.shape({
+		id: pt.string.isRequired,
+		headline: pt.string.isRequired,
+		tab: pt.string.isRequired,
+		img: pt.string.isRequired,
+		author: pt.string.isRequired
+	})
+};
