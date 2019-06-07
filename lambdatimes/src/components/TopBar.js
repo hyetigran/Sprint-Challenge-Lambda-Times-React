@@ -12,6 +12,9 @@ const TopBarDiv = styled.div`
 	position: fixed;
 	height: 44px;
 	background-color: #333;
+	@media (min-width: 1280px) {
+		width: 1280px;
+	}
 `;
 const TopBarContainerDiv = styled.div`
 	width: 100%;
